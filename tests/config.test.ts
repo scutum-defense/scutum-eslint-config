@@ -11,7 +11,10 @@ describe("scutumConfig", () => {
   it("should have named config blocks", () => {
     for (const config of scutumConfig) {
       expect(config.name).toBeDefined();
-      expect(config.name).toMatch(/^scutum\//);
+    }
+    const names = scutumConfig.map((c) => c.name);
+    for (const expected of ["scutum/base", "scutum/typescript", "scutum/security"]) {
+      expect(names).toContain(expected);
     }
   });
 

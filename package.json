@@ -4,7 +4,12 @@
   "description": "Shared ESLint configuration for Scutum TypeScript projects — defense-grade code quality",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "require": "./dist/index.js" } },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsc",
@@ -16,9 +21,11 @@
     "typescript-eslint": "^8.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.6.0",
-    "vitest": "^2.0.0",
+    "@types/node": "^26.6.3",
     "eslint": "^9.0.0",
-    "typescript-eslint": "^8.0.0"
-  }
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^2.0.0"
+  },
+  "type": "module"
 }
